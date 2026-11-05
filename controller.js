@@ -1,5 +1,5 @@
 function increaseCount() {
-    model.count++;
+    model.count+-+;
     updateView();
 }
 
