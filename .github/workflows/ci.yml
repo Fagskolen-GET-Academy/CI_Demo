@@ -22,3 +22,6 @@ jobs:
 
       - name: Sjekk JavaScript-syntaks
         run: node --check controller.js
+
+      - name: Kjør QUnit-tester
+        run: npx --yes qunit@3.0.0 --require ./ci/setup.js ./controller.test.js

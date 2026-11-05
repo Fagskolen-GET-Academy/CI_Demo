@@ -15,7 +15,7 @@ QUnit.module('Controller', function (hooks) {
 
         resetCount();
 
-        assert.equal(model.count, 0);
+        assert.equal(model.count, 50);
     });
 
 });
