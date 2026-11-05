@@ -1,0 +1,24 @@
+name: Continuous Integration
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hent koden
+        uses: actions/checkout@v7
+
+      - name: Sett opp Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Sjekk JavaScript-syntaks
+        run: node --check controller.js

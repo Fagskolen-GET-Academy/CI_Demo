@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>CI-demo</title>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script>
+    const model = {
+        count: 0,
+    };
+
+    function updateView() {
+        document.getElementById('app').innerHTML = /*HTML*/`
+            <h1>Clicker</h1>
+
+            <p>Poeng: ${model.count}</p>
+
+            <button onclick="increaseCount()">
+                Øk med 1
+            </button>
+
+            <button onclick="resetCount()">
+                Nullstill
+            </button>
+        `;
+    }
+</script>
+
+<script src="controller.js"></script>
+
+<script>
+    updateView();
+</script>
+
+</body>
+</html>
